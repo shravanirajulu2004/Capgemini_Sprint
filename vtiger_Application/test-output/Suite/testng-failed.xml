@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Functional"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="organization.OrganizationTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="dbConnection"/>
+          <include name="bt"/>
+          <include name="at"/>
+          <include name="beforeMethod"/>
+          <include name="closeConnection"/>
+          <include name="searchExistingOrganization"/>
+        </methods>
+      </class> <!-- organization.OrganizationTest -->
+      <class name="homepage.HomePageTest">
+        <methods>
+          <include name="verifyAddDashboardWidget"/>
+          <include name="afterMethod"/>
+          <include name="dbConnection"/>
+          <include name="bt"/>
+          <include name="at"/>
+          <include name="beforeMethod"/>
+          <include name="closeConnection"/>
+        </methods>
+      </class> <!-- homepage.HomePageTest -->
+      <class name="calendar.CalendarTest">
+        <methods>
+          <include name="createTodoWithExcelData"/>
+          <include name="afterMethod"/>
+          <include name="dbConnection"/>
+          <include name="verifyAllEventsAndTodosTab"/>
+          <include name="bt"/>
+          <include name="beforeMethod"/>
+          <include name="at"/>
+          <include name="closeConnection"/>
+        </methods>
+      </class> <!-- calendar.CalendarTest -->
+      <class name="contact.ContactTest">
+        <methods>
+          <include name="dbConnection"/>
+          <include name="afterMethod"/>
+          <include name="bt"/>
+          <include name="at"/>
+          <include name="beforeMethod"/>
+          <include name="closeConnection"/>
+          <include name="createContactWithValidDetails"/>
+        </methods>
+      </class> <!-- contact.ContactTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

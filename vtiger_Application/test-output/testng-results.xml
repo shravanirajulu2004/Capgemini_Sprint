@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Before Suite]]>
+    </line>
+    <line>
+      <![CDATA[Before Test]]>
+    </line>
+    <line>
+      <![CDATA[Before Method]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Contact creation was rejected without Last Name.]]>
+    </line>
+    <line>
+      <![CDATA[After Method]]>
+    </line>
+    <line>
+      <![CDATA[Before Method]]>
+    </line>
+    <line>
+      <![CDATA[PASS: Organization creation was rejected when the mandatory name was empty.]]>
+    </line>
+    <line>
+      <![CDATA[After Method]]>
+    </line>
+    <line>
+      <![CDATA[After Test]]>
+    </line>
+    <line>
+      <![CDATA[After Suite]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-10-18T17:15:18 IST" name="Suite" finished-at="2026-10-18T17:17:56 IST" duration-ms="158453">
+    <groups>
+      <group name="Negative">
+        <method signature="ContactTest.createContactWithoutLastName()[pri:0, instance:contact.ContactTest@1f2586d6]" name="createContactWithoutLastName" class="contact.ContactTest"/>
+        <method signature="OrganizationTest.createOrganizationWithMissingMandatoryName()[pri:0, instance:organization.OrganizationTest@682b2fa]" name="createOrganizationWithMissingMandatoryName" class="organization.OrganizationTest"/>
+      </group> <!-- Negative -->
+    </groups>
+    <test started-at="2026-10-18T17:15:18 IST" name="Test" finished-at="2026-10-18T17:17:56 IST" duration-ms="158453">
+      <class name="contact.ContactTest">
+        <test-method is-config="true" signature="dbConnection()[pri:0, instance:contact.ContactTest@1f2586d6]" started-at="2026-10-18T17:15:18 IST" name="dbConnection" finished-at="2026-10-18T17:15:18 IST" duration-ms="43" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Before Suite]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- dbConnection -->
+        <test-method is-config="true" signature="bt()[pri:0, instance:contact.ContactTest@1f2586d6]" started-at="2026-10-18T17:15:18 IST" name="bt" finished-at="2026-10-18T17:15:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Before Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bt -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:contact.ContactTest@1f2586d6]" started-at="2026-10-18T17:15:18 IST" name="beforeMethod" finished-at="2026-10-18T17:16:31 IST" duration-ms="72980" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Before Method]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="createContactWithoutLastName()[pri:0, instance:contact.ContactTest@1f2586d6]" started-at="2026-10-18T17:16:31 IST" name="createContactWithoutLastName" finished-at="2026-10-18T17:16:42 IST" duration-ms="11156" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Contact creation was rejected without Last Name.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createContactWithoutLastName -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:contact.ContactTest@1f2586d6]" started-at="2026-10-18T17:16:42 IST" name="afterMethod" finished-at="2026-10-18T17:16:43 IST" duration-ms="544" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[After Method]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="at()[pri:0, instance:contact.ContactTest@1f2586d6]" started-at="2026-10-18T17:17:56 IST" name="at" finished-at="2026-10-18T17:17:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[After Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- at -->
+        <test-method is-config="true" signature="closeConnection()[pri:0, instance:contact.ContactTest@1f2586d6]" started-at="2026-10-18T17:17:56 IST" name="closeConnection" finished-at="2026-10-18T17:17:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[After Suite]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeConnection -->
+      </class> <!-- contact.ContactTest -->
+      <class name="organization.OrganizationTest">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:organization.OrganizationTest@682b2fa]" started-at="2026-10-18T17:16:43 IST" name="beforeMethod" finished-at="2026-10-18T17:17:39 IST" duration-ms="56563" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Before Method]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="createOrganizationWithMissingMandatoryName()[pri:0, instance:organization.OrganizationTest@682b2fa]" started-at="2026-10-18T17:17:39 IST" name="createOrganizationWithMissingMandatoryName" finished-at="2026-10-18T17:17:55 IST" duration-ms="15642" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PASS: Organization creation was rejected when the mandatory name was empty.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createOrganizationWithMissingMandatoryName -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:organization.OrganizationTest@682b2fa]" started-at="2026-10-18T17:17:55 IST" name="afterMethod" finished-at="2026-10-18T17:17:56 IST" duration-ms="597" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[After Method]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- organization.OrganizationTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

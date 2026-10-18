@@ -1,0 +1,206 @@
+<html>
+<head>
+<title>TestNG:  Firefox Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Firefox Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Oct 18 14:20:47 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>1305 seconds (1305005 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='calendar.CalendarTest.verifyAllEventsAndTodosTabOpens()'><b>verifyAllEventsAndTodosTabOpens</b><br>Test class: calendar.CalendarTest<br/>
+<a href="#Output-305295186" onClick='toggleBox("Output-305295186", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-305295186" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-305295186">
+PASS: All Events & Todos section opened successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>calendar.CalendarTest@43c1b556</td></tr>
+<tr>
+<td title='homepage.HomePageTest.createDashboardWidgetWithExcelData()'><b>createDashboardWidgetWithExcelData</b><br>Test class: homepage.HomePageTest</td>
+<td></td>
+<td>12</td>
+<td>homepage.HomePageTest@22fcf7ab</td></tr>
+<tr>
+<td title='calendar.CalendarTest.verifyToDoFormOpens()'><b>verifyToDoFormOpens</b><br>Test class: calendar.CalendarTest</td>
+<td></td>
+<td>5</td>
+<td>calendar.CalendarTest@43c1b556</td></tr>
+<tr>
+<td title='homepage.HomePageTest.createNotebookWithExcelData()'><b>createNotebookWithExcelData</b><br>Test class: homepage.HomePageTest</td>
+<td></td>
+<td>1</td>
+<td>homepage.HomePageTest@22fcf7ab</td></tr>
+<tr>
+<td title='contact.ContactTest.createContactWithoutLastName()'><b>createContactWithoutLastName</b><br>Test class: contact.ContactTest<br/>
+<a href="#Output-1138898639" onClick='toggleBox("Output-1138898639", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1138898639" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1138898639">
+PASS: Contact creation was rejected without Last Name.<br/>
+</div>
+</td>
+<td></td>
+<td>38</td>
+<td>contact.ContactTest@4009e306</td></tr>
+<tr>
+<td title='calendar.CalendarTest.createToDoEndToEnd()'><b>createToDoEndToEnd</b><br>Test class: calendar.CalendarTest</td>
+<td></td>
+<td>35</td>
+<td>calendar.CalendarTest@43c1b556</td></tr>
+<tr>
+<td title='organization.OrganizationTest.verifyOrganizationCreationEndToEnd()'><b>verifyOrganizationCreationEndToEnd</b><br>Test class: organization.OrganizationTest<br/>
+<a href="#Output-929260684" onClick='toggleBox("Output-929260684", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-929260684" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-929260684">
+PASS: Organization created and verified: SystemTest_Org_003_1792314395496<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>organization.OrganizationTest@587e5365</td></tr>
+<tr>
+<td title='contact.ContactTest.verifyContactModuleAndCreateFormOpens()'><b>verifyContactModuleAndCreateFormOpens</b><br>Test class: contact.ContactTest<br/>
+<a href="#Output-1521529989" onClick='toggleBox("Output-1521529989", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1521529989" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1521529989">
+PASS: Contacts module and Create Contact form opened.<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>contact.ContactTest@4009e306</td></tr>
+<tr>
+<td title='homepage.HomePageTest.verifyCalendarModuleNavigation()'><b>verifyCalendarModuleNavigation</b><br>Test class: homepage.HomePageTest</td>
+<td></td>
+<td>1</td>
+<td>homepage.HomePageTest@22fcf7ab</td></tr>
+<tr>
+<td title='organization.OrganizationTest.searchExistingOrganization()'><b>searchExistingOrganization</b><br>Test class: organization.OrganizationTest<br/>
+<a href="#Output-777397770" onClick='toggleBox("Output-777397770", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-777397770" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-777397770">
+PASS: Organization search successful: SystemTest_Org_004<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>organization.OrganizationTest@587e5365</td></tr>
+<tr>
+<td title='homepage.HomePageTest.verifyHomePageLoads()'><b>verifyHomePageLoads</b><br>Test class: homepage.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>homepage.HomePageTest@22fcf7ab</td></tr>
+<tr>
+<td title='organization.OrganizationTest.verifyOrganizationsModuleOpens()'><b>verifyOrganizationsModuleOpens</b><br>Test class: organization.OrganizationTest<br/>
+<a href="#Output-623372250" onClick='toggleBox("Output-623372250", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-623372250" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-623372250">
+PASS: Organizations module opened successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>organization.OrganizationTest@587e5365</td></tr>
+<tr>
+<td title='contact.ContactTest.createContactWithValidDetails()'><b>createContactWithValidDetails</b><br>Test class: contact.ContactTest<br/>
+<a href="#Output-63549911" onClick='toggleBox("Output-63549911", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-63549911" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-63549911">
+PASS: Contact created successfully: Kent<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>contact.ContactTest@4009e306</td></tr>
+<tr>
+<td title='organization.OrganizationTest.createOrganizationWithMissingMandatoryName()'><b>createOrganizationWithMissingMandatoryName</b><br>Test class: organization.OrganizationTest<br/>
+<a href="#Output-211914719" onClick='toggleBox("Output-211914719", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-211914719" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-211914719">
+PASS: Organization creation was rejected when the mandatory name was empty.<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>organization.OrganizationTest@587e5365</td></tr>
+</table><p>
+</body>
+</html>
