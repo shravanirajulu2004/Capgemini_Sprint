@@ -4,6 +4,8 @@ package organization;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 import java.time.Duration;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import genericutility.BaseClass;
@@ -13,47 +15,52 @@ import objrepo.OrganizationPage;
 public class OrganizationTest extends BaseClass {
 
 	@Test(groups = { "System", "Positive" })
-	public void verifyOrganizationCreationEndToEnd() throws Exception {
+	public void systemOrganizationFlow() throws IOException {
 
+		OrganizationPage org = new OrganizationPage(driver);
 		ExcelUtility excel = new ExcelUtility();
+
+		// =============== FETCH DATA FROM EXCEL ===============
 
 		String name = excel.getDataFromExcel("Organization", 3, 0) + "_" + System.currentTimeMillis();
 		String website = excel.getDataFromExcel("Organization", 3, 1);
 		String phone = excel.getDataFromExcel("Organization", 3, 2);
 		String email = excel.getDataFromExcel("Organization", 3, 3);
 
-		OrganizationPage organizationPage = new OrganizationPage(driver);
+		// =============== STEP 1: OPEN ORGANIZATIONS ===============
 
-		// Step 1: Open Organizations
-		organizationPage.openOrganizationsModule();
+		org.clickOrganizations();
 
-		// Step 2: Click Add
-		organizationPage.clickAddOrganization();
+		// =============== STEP 2: CLICK ADD ORGANIZATION ===============
 
-		// Step 3: Enter details
-		organizationPage.enterOrganizationDetails(name, website, phone, email);
+		org.clickCreate();
 
-		// Step 4: Save
-		organizationPage.clickSave();
+		// =============== STEP 3: ENTER ORGANIZATION DETAILS ===============
 
-		// Handle any application alert
-		if (organizationPage.isAlertPresent()) {
-			String alertMessage = organizationPage.getAlertText();
-			organizationPage.acceptAlert();
+		org.enterOrganizationName(name);
+		org.enterWebsite(website);
+		org.enterPhone(phone);
+		org.enterEmail(email);
 
-			Assert.fail("Organization creation failed. Alert: " + alertMessage);
-		}
+		// =============== STEP 4: SAVE ORGANIZATION ===============
 
-		// Search for the exact organization that was just created
-		organizationPage.openOrganizationsModule();
-		organizationPage.searchOrganization(name);
+		org.clickSave();
 
-		// Verify the saved record exists in search results
-		Assert.assertTrue(organizationPage.isOrganizationNameDisplayed(name),
-				"Saved organization was not found: " + name);
+		Reporter.log("Organization details submitted: " + name, true);
 
-		Reporter.log("PASS: Organization created and verified: " + name, true);
+		// =============== STEP 5: OPEN ORGANIZATIONS AGAIN ===============
 
+		org.clickOrganizations();
+
+		// =============== STEP 6: SEARCH SAVED ORGANIZATION ===============
+
+		org.searchOrganization(name);
+
+		// =============== STEP 7: VERIFY SEARCH RESULT ===============
+
+		Assert.assertTrue(org.isOrganizationDisplayed(name), "FAIL: Organization was not found after saving: " + name);
+
+		Reporter.log("PASS: Organization created and found in search results: " + name, true);
 	}
 
 	@Test(groups = { "Negative" })
