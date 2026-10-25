@@ -53,16 +53,6 @@ public class BaseClass {
 
 	}
 
-//	@AfterMethod(alwaysRun = true)
-//	public void afterMethod() {
-//
-//		Reporter.log("After Method", true);
-//
-//		if (driver != null) {
-//			driver.quit();
-//			driver = null;
-//		}
-//	}
 
 	@AfterMethod(alwaysRun = true)
 	public void afterMethod() {

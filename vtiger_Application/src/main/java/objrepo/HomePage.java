@@ -59,6 +59,12 @@ public class HomePage {
 	@FindBy(xpath = "//img[@alt='Open Calendar...']")
 	private WebElement calendarIcon;
 
+	@FindBy(xpath = "//img[contains(@src,'user.PNG')]")
+	private WebElement userIcon;
+
+	@FindBy(xpath = "//a[contains(@href,'action=Logout')]")
+	private WebElement logoutLink;
+
 	public void clickAddWidget() {
 		addWidgetButton.click();
 	}
@@ -128,23 +134,18 @@ public class HomePage {
 
 		new Select(dropdown).selectByIndex(index);
 	}
-	@FindBy(xpath = "//img[contains(@src,'user.PNG')]")
-	private WebElement userIcon;
-
-	@FindBy(xpath = "//a[contains(@href,'action=Logout')]")
-	private WebElement logoutLink;
 
 	public WebElement getUserIcon() {
-	    return userIcon;
+		return userIcon;
 	}
 
 	public WebElement getLogoutLink() {
-	    return logoutLink;
+		return logoutLink;
 	}
 
 	public void logout() {
-	    userIcon.click();
-	    logoutLink.click();
+		userIcon.click();
+		logoutLink.click();
 	}
 
 }
