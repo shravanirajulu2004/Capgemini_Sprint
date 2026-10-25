@@ -128,5 +128,23 @@ public class HomePage {
 
 		new Select(dropdown).selectByIndex(index);
 	}
+	@FindBy(xpath = "//img[contains(@src,'user.PNG')]")
+	private WebElement userIcon;
+
+	@FindBy(xpath = "//a[contains(@href,'action=Logout')]")
+	private WebElement logoutLink;
+
+	public WebElement getUserIcon() {
+	    return userIcon;
+	}
+
+	public WebElement getLogoutLink() {
+	    return logoutLink;
+	}
+
+	public void logout() {
+	    userIcon.click();
+	    logoutLink.click();
+	}
 
 }

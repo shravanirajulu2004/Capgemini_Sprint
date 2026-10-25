@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import objrepo.HomePage;
 import objrepo.LoginPage;
 
 public class BaseClass {
@@ -52,14 +53,30 @@ public class BaseClass {
 
 	}
 
+//	@AfterMethod(alwaysRun = true)
+//	public void afterMethod() {
+//
+//		Reporter.log("After Method", true);
+//
+//		if (driver != null) {
+//			driver.quit();
+//			driver = null;
+//		}
+//	}
+
 	@AfterMethod(alwaysRun = true)
 	public void afterMethod() {
 
 		Reporter.log("After Method", true);
 
 		if (driver != null) {
-			driver.quit();
-			driver = null;
+			try {
+				HomePage hp = new HomePage(driver);
+				hp.logout();
+			} finally {
+				driver.quit();
+				driver = null;
+			}
 		}
 	}
 
